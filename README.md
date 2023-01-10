@@ -7,7 +7,7 @@ To download the keil IDE, just click [here](https://www.keil.com/demo/eval/arm.h
 
 Sadly I lost a lot of time trying to make the uVision Keil 5 find the installed packs of STM32. The issue and solution for my problem is similary to [this topic](https://community.arm.com/support-forums/f/keil-forum/46602/can-t-find-any-device-after-installing-the-package) in the ARM community. With all packs previous installed I just re-install the IDE and then it worked.
 
-## Creating a new project
+## Creating a new project and configurating the environment to build and debug the project
 
 1. Go to 'Project' -> 'New uVision project...'
 
@@ -30,3 +30,50 @@ Sadly I lost a lot of time trying to make the uVision Keil 5 find the installed 
 ![image](https://user-images.githubusercontent.com/58916022/211560224-37218104-8b35-419e-bba8-baf4c2c270cf.png)
 
 6. Create 3 files inside the 'App' folder. Two source files named 'main.c' and 'uart.c' and a header file with the name 'uart.h'.
+
+![image](https://user-images.githubusercontent.com/58916022/211565028-257ae3eb-cd53-4127-957a-43798c12b924.png)
+
+7. Change the ARM compiler from 'C 90' to 'C99' to fix the conflict of Device Family Pack requirement.
+
+![image](https://user-images.githubusercontent.com/58916022/211565205-214826f9-7be1-4f5c-868d-bdb467e63df3.png)
+
+7.a Click in the 'Options for target' icon. On the 'C/C++ (AC6)' tab change in 'Language / Code Generation' -> 'Language C' the 'c90' option to 'c99'. Then click 'OK'. 
+
+![image](https://user-images.githubusercontent.com/58916022/211566575-f4aedb34-bbd4-40d7-bad0-e4ccaf7210ce.png)
+
+7.b The instructor asks to change to 'ARM Compiler:' -> 'Compiler Verion 5'. But since it's missing.
+
+![image](https://user-images.githubusercontent.com/58916022/211566231-3fcd4948-1fe5-4e9f-9fbc-d21b46d2f274.png)
+
+NOTE: When compiling the code, errors appeared refering the stdio lib, then we will install the 'Compiler Verion 5'. But always when creating a new project, the last version is recommended.
+
+![image](https://user-images.githubusercontent.com/58916022/211583978-24bde721-dcb8-44c8-9b2a-fd6a2c0d831b.png)
+
+7.b To add missing compiler I followed [this article](https://developer.arm.com/documentation/ka005073/latest#:~:text=While%20Arm%20Compiler%205%20is,Existing%20projects.) from developer.arm website.
+
+To download the 'Compiler Verion 5' you must login to ARM website. And sadly, after creating an account to do that, the following message appear:
+
+![image](https://user-images.githubusercontent.com/58916022/211583153-9b367a6d-ff10-41b7-bcc4-094dcfa788af.png)
+
+PAREI AQUI - CONTINUA APÓS ACESSO AO SITE ARM E CONSEGUIR FAZER DOWNLOAD.
+
+8. To build project click at 'Build' icon.
+
+![image](https://user-images.githubusercontent.com/58916022/211577685-637ebed5-35ad-4d38-aa65-6c90443e6d66.png)
+
+9. To select debugger, go to 'Options for Target...' icon.
+
+9.a Then in the 'Debug' tab, select the 'ST-Link Debugger'.
+
+![image](https://user-images.githubusercontent.com/58916022/211578721-6cb2f361-0552-4d3d-9d5d-333e0848c224.png)
+
+9.b Then click in 'Settings' and in the 'Flash Download' tab, in 'Download Function' tick the option 'Reset and Run'. Then click in the 'OK' button and 'OK' again.
+
+![image](https://user-images.githubusercontent.com/58916022/211579721-dfd13550-6fc2-47b4-96bf-841cc70c616e.png)
+
+10. To send to the board click at 'Download' icon.
+
+![image](https://user-images.githubusercontent.com/58916022/211577906-92e4f7ba-4b0c-4367-aaf0-32a877977f2c.png)
+
+## codes
+
