@@ -55,9 +55,29 @@ To download the 'Compiler Verion 5' you must login to ARM website. And sadly, af
 
 ![image](https://user-images.githubusercontent.com/58916022/211583153-9b367a6d-ff10-41b7-bcc4-094dcfa788af.png)
 
-PAREI AQUI - CONTINUA APÓS ACESSO AO SITE ARM E CONSEGUIR FAZER DOWNLOAD.
+Then I was getting error when trying to download the compiler:
 
-8. To build project click at 'Build' icon.
+![image](https://user-images.githubusercontent.com/58916022/211800401-068da728-3da1-4edf-978e-097debd891b8.png)
+
+I Contacted ARM team and they asked me to try a different browser. Tried again and it worked! After download I just unziped and isntalled (.exe file).
+
+![image](https://user-images.githubusercontent.com/58916022/211800664-da61f066-1aed-4a01-9383-acce47932155.png)
+
+Then I wen to 'Project' -> 'Manage' -> 'Project Items...'
+
+![image](https://user-images.githubusercontent.com/58916022/211802154-73a93494-a52b-4c6e-b132-0c686b381b09.png)
+
+Then in 'Folder/Estensions' tab I clicked on ellipsis buttom.
+
+![image](https://user-images.githubusercontent.com/58916022/211802642-b12e1a6e-bb97-44bb-b7be-8fbb0c37c970.png)
+
+And then 'Add another ARM Compiler Version to List...'.
+
+![image](https://user-images.githubusercontent.com/58916022/211802894-15b80b21-f41c-44dd-a4b8-bfea30a8c49c.png)
+
+
+
+#### 8. To build project click at 'Build' icon.
 
 ![image](https://user-images.githubusercontent.com/58916022/211577685-637ebed5-35ad-4d38-aa65-6c90443e6d66.png)
 
